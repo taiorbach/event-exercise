@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .bgRed{
+        background-color: red;
+        width: 300px;
+        height: 300px;
+        border: red solid 1px;
+        
+    }
+
+    .bgGreen{
+        background-color: green;
+        width: 150px;
+        height: 150px;
+        border: green solid 1px;
+    }
+
+    .bgBlue{
+        background-color: blue;
+        width: 75px;
+        height: 75px;
+        border: blue solid 1px;
+    }
+
+    .bgYellow{
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+    }
+
+    .bgOrange{
+        width: 300px;
+        height: 300px;
+        background-color: orange;
+    }
+
+
+</style>
+
+
+
+<body>
+
+
+    <div id="squareOne" class="bgRed">
+        <div id="squareTwo" class="bgGreen">
+            <div id="squareThree" class="bgBlue">
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+
+
+const squareOne = document.querySelector('.bgRed')
+squareThree.addEventListener('click' , changeColor )
+
+let squareOneBgColor = true
+
+function changeColor(event){
+    if(squareOneBgColor){
+        squareOne.classList.add('bgYellow')
+        squareOne.classList.remove('bgRed')
+
+    }
+    else{
+        squareOne.classList.remove('bgYellow')
+        squareOne.classList.add('bgRed')
+        
+    }
+    squareOneBgColor != squareOneBgColor
+}
+
+
+
+
+
+</script>
+
+
+
+</html>

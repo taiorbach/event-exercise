@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input type="text" id="input1">
+<div id="noNumbers">
+
+</div>
+
+
+
+</body>
+
+<script>
+
+
+    const input = document.querySelector('#input1')
+    const myDiv = document.querySelector('#noNumbers')
+    input.addEventListener('keypress' , keyPress)
+
+    function keyPress(event){
+        myDiv.innerHTML = ""
+        for( let i = 0 ; i < 10 ; i++){
+            if(event.key == i){
+                return 
+            }
+        }
+        event.preventDefault()
+        myDiv.innerHTML = 'Only Numbers Allowed'
+    }
+
+
+
+</script>
+</html>

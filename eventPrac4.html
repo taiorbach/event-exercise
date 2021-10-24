@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input type="text" id="input1">
+    <div id="char">
+
+    </div>
+
+
+
+    
+</body>
+
+<script>
+
+const input = document.querySelector('#input1')
+const div = document.querySelector('#char')
+const notAllowedChars = ['(' , ')' , '!' , '*', '$', '#' , '@' , '&']
+
+input.addEventListener('keypress' , keyPress)
+
+function keyPress(event){
+    div.innerHTML = ""
+    for(let char of notAllowedChars){
+        if(event.key === char){
+            div.innerHTML = 'Those chars are not allowed'
+            event.preventDefault()
+            return
+        }
+    }
+}
+
+
+</script>
+</html>
